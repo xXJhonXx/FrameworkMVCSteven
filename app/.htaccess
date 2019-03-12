@@ -1,0 +1,3 @@
+# Seguridad del proyecto en el servidor
+# se denega la entrada a la carpeta app
+Options  -Indexes 

@@ -1,0 +1,14 @@
+# Se elimina la opcion de buscar multiples 
+# vistas que no existan redireccionando
+# a el archivo index.php creado en la carpete
+# public.
+<IfModule mod_rewrite.c>
+Options -Multiviews
+RewriteEngine On
+RewriteBase /CRUD-MVC-STEVEN/public
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
+
+
